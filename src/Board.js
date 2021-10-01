@@ -170,11 +170,94 @@
     //
     // test if a specific major diagonal on this board contains a conflict
     hasMajorDiagonalConflictAt: function(majorDiagonalColumnIndexAtFirstRow) {
-      return false; // fixme
+      // create the board
+      // loop through 1 column over and 1 row down
+      // add values
+      // if values > 1
+      // return true
+      // else
+      // return false
+
+
+
+
+      var n = majorDiagonalColumnIndexAtFirstRow;
+      var board = this.rows();
+      var counter = 0;
+
+
+      var n = majorDiagonalColumnIndexAtFirstRow;
+      var board = this.rows();
+      var counter = 0;
+      var num = majorDiagonalColumnIndexAtFirstRow;
+      for (var i = 0; i < board.length - n; i++) {
+        // if ((i < board.length - 1) || (i < board[i].length)) {
+        //   return;
+        // }
+        if (board[i][n]) {
+          console.log(board[i][n]);
+          counter ++;
+        }
+        num++;
+      }
+      console.log(counter);
+      return counter > 1;
+      var num = majorDiagonalColumnIndexAtFirstRow;
+      for (var i = 0; i < board.length - n; i++) {
+        // if ((i < board.length - 1) || (i < board[i].length)) {
+        //   return;
+        // }
+        if (board[i][n]) {
+          console.log(board[i][n]);
+          counter ++;
+        }
+        num++;
+      }
+      console.log(counter);
+      return counter > 1;
+
+      // return false; // fixme
     },
 
     // test if any major diagonals on this board contain conflicts
     hasAnyMajorDiagonalConflicts: function() {
+      // initialize board;
+      // inititalize counter;
+
+      // loop through columns in first row
+      // run hasMajorDiagonalConflictAt
+      // if truthy
+      // increment counter
+
+      // loop index 0 of all rows
+      // run hasMajorDiagonalConflictAt
+      // if truthy
+      // increment counter
+
+      // return counter > 1 comparison
+      // this.attributes[0]
+      // var board = this.rows();
+      // var firstRow = this.attributes[0];
+      // var counter = 0;
+
+      // for (var i = 0; i < firstRow.length; i++) {
+      //   if (this.hasAnyMajorDiagonalConflicts(i)) {
+      //     counter++;
+      //   }
+      // }
+
+      // for (var j = 0; j < board.length; j++) {
+      //   if (this.hasMajorDiagonalConflictAt((board[j][0]))) {
+      //     counter++;
+      //   }
+      // }
+      // return counter > 1;
+
+      for (var i = 0; i < this.rows().length - 1; i++) {
+        if (this.hasMajorDiagonalConflictAt(i)) {
+          return true;
+        }
+      }
       return false; // fixme
     },
 
